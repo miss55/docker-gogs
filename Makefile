@@ -8,8 +8,8 @@ start: ## run gogs
 stop: ## stop gogs
 		@echo "$(shell docker ps | grep 'gogs/gogs' && docker stop gogs_jenson||echo 'gogs not found')"
 test: ## test gogs
-		@echo "ssh port : $(SP)"
-		@echo "host port : $(HP)"
+		@echo "ssh port SP=: $(SP)"
+		@echo "host port HP=: $(HP)"
 		@echo "data path: $(DATA)"
 		@echo "docker run --name=gogs --rm -p $(SP):22 -p $(HP):3000 -v $(DATA):/data   gogs/gogs"
 status: ## show status
